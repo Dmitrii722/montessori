@@ -26,22 +26,26 @@ function App() {
     });
     lenisRef.current = lenis;
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+   useEffect(() => {
+  const lenis = new Lenis({
+    lerp: 0.08,
+    duration: 1.2,
+  });
+  lenisRef.current = lenis;
 
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
+  // Единственный правильный способ связать Lenis + GSAP
+  lenis.on("scroll", ScrollTrigger.update);
+  
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoothing(0);
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  return () => {
+    lenis.destroy();
+    gsap.ticker.remove(lenis.raf); // важно очистить ticker
+  };
+}, []);
 
   const handlePrint = (result?: SurveyResult) => {
     if (result) {
