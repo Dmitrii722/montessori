@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 37 33% 93%;
+    --foreground: 0 0% 10%;
+    --card: 37 33% 93%;
+    --card-foreground: 0 0% 10%;
+    --popover: 37 33% 93%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 37 33% 93%;
+    --secondary: 30 22% 29%;
+    --secondary-foreground: 37 33% 93%;
+    --muted: 33 27% 85%;
+    --muted-foreground: 30 22% 29%;
+    --accent: 43 72% 38%;
+    --accent-foreground: 37 33% 93%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 22% 29%;
+    --input: 33 27% 85%;
+    --ring: 43 72% 38%;
+    --radius: 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background-color: #F5F0E8;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', serif;
+  }
+}
+
+@layer base {
+  .font-display {
+    font-family: 'Cinzel Decorative', serif;
+  }
+
+  .font-body {
+    font-family: 'Lora', Georgia, serif;
+  }
+
+  .font-label {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-mono-label {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-handwritten {
+    font-family: 'Caveat', cursive;
+  }
+}
+
+@layer utilities {
+  .text-bronze {
+    color: #B8860B;
+  }
+
+  .bg-parchment {
+    background-color: #F5F0E8;
+  }
+
+  .bg-parchment-dark {
+    background-color: #E8DCC8;
+  }
+
+  .text-warm-brown {
+    color: #5C4A3A;
+  }
+
+  .border-warm-brown {
+    border-color: #5C4A3A;
+  }
+}
+
+@layer base {
+  @media print {
+    body {
+      background: white !important;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F0E8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #5C4A3A;
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B8860B;
+  }
+}
