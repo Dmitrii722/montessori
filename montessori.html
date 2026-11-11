@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Студия Монтессори · Ирина Кичигина — Тюмень</title>
+  <meta name="description" content="Студия Монтессори для малышей от 1 года в детском центре «Лукошко», Тюмень. Подготовленная среда, свободная работа, музыкальный круг. Интерактивная диагностика развития 12–24 месяцев с сохранением в PDF.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    #diagQuiz { display: none; }
+    #diagQuiz .diag-tabs { display: flex; }
+    .hero-figure .fig-main.landscape { border-radius: 28px; aspect-ratio: 16 / 11.5; }
+  </style>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="veil" aria-hidden="true">
+    <i class="veil-back"></i>
+    <i class="veil-front"><span class="veil-word"></span></i>
+  </div>
+
+  <nav class="site-nav" aria-label="Основная навигация">
+    <a class="brand" href="index.html">Ирина <em>Кичигина</em></a>
+    <div class="nav-links">
+      <a href="index.html">Визитка</a>
+      <a href="montessori.html" class="is-here">Монтессори</a>
+      <a href="logoritmika.html">Логоритмика</a>
+    </div>
+    <button class="nav-burger" aria-expanded="false" aria-label="Открыть меню"><i></i></button>
+  </nav>
+
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="index.html">Визитка <small>обо мне</small></a>
+    <a href="montessori.html">Монтессори <small>1–3 года</small></a>
+    <a href="logoritmika.html">Логоритмика <small>речь в ритме</small></a>
+    <div class="menu-foot">Детский центр «Лукошко» · Тюмень, ул. Газовиков, 41к1 · тел. 53-12-20 (доб. 3)</div>
+  </div>
+
+  <!-- ================= ГЕРОЙ ================= -->
+  <header class="hero studio-hero">
+    <svg class="float-shape draw" data-depth="18" style="top:12%;right:6%;width:190px" viewBox="0 0 190 190" fill="none" aria-hidden="true">
+      <circle cx="95" cy="95" r="70" stroke="#c4785a" stroke-width="1.4"/>
+    </svg>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="kicker" data-reveal>студия · малыши от 1 года</span>
+        <h1 class="display hero-title">
+          <span class="line-mask" style="--d:.1s"><span>Студия</span></span>
+          <span class="line-mask" style="--d:.22s"><span><em>Монтессори</em></span></span>
+        </h1>
+        <p class="lead" data-reveal style="--d:.3s">
+          Пространство, где малыш учится сам — руками, движением и любопытством.
+          Сто пособий, два кабинета и педагог, который наблюдает, направляет
+          и учит этому же маму.
+        </p>
+        <div class="hero-facts" data-reveal style="--d:.4s">
+          <span class="fact-pill"><b>возраст</b> от 1 года</span>
+          <span class="fact-pill"><b>расписание</b> вт и пт · утро</span>
+          <span class="fact-pill"><b>занятие</b> 45 минут</span>
+          <span class="fact-pill"><b>группа</b> до 9 детей</span>
+          <span class="fact-pill"><b>абонемент</b> 670 ₽</span>
+        </div>
+        <div class="contact-actions" data-reveal style="--d:.5s; justify-content:flex-start; margin-top:36px">
+          <a class="btn btn-fill" href="#diagnostic-section" data-cursor="тест">
+            Диагностика развития
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v12M3 9l5 5 5-5"/></svg>
+          </a>
+          <a class="btn" href="https://vk.ru/id27806549" target="_blank" rel="noopener" data-cursor="ВК">Записаться на пробное</a>
+        </div>
+      </div>
+      <div class="hero-figure" data-reveal="scale" style="--d:.35s">
+        <div class="fig-main landscape" data-depth="6">
+          <img src="assets/img/mont-hero.jpg" alt="Монтессори-материалы: розовая башня, коричневая лестница, цилиндры, бусины" width="2048" height="1152">
+        </div>
+        <span class="orbit-chip t" data-depth="24" style="top:6%;right:-4%">100+ пособий</span>
+        <span class="orbit-chip s" data-depth="16" style="bottom:20%;left:-8%">свободный выбор</span>
+        <span class="orbit-chip g" data-depth="28" style="bottom:-14px;right:8%">музыкальный круг</span>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">листайте</div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>помоги мне сделать это самому</span><i></i>
+      <span>подготовленная среда</span><i></i>
+      <span>сензитивные периоды</span><i></i>
+      <span>рука — инструмент разума</span><i></i>
+      <span>свобода в рамках</span><i></i>
+    </div>
+  </div>
+
+  <!-- ================= ТЕЗИСЫ ================= -->
+  <section class="theses">
+    <div class="wrap">
+      <span class="kicker" data-reveal>Почему Монтессори</span>
+      <h2 class="split-h" data-reveal style="--d:.1s">
+        <span>Идеи, которые</span>
+        <span class="h-right">работают</span>
+      </h2>
+
+      <div class="thesis-grid">
+        <article class="thesis wide accent" data-reveal style="--d:.1s">
+          <span class="t-num">01 · фундамент</span>
+          <h3>Впитывающий разум</h3>
+          <p>
+            От рождения до трёх лет мозг ребёнка впитывает язык, движения и порядок вещей
+            без видимых усилий — так, как больше никогда в жизни. Эти годы нельзя
+            «переиграть» позже: среда, в которой живёт малыш, становится его
+            внутренним фундаментом.
+          </p>
+        </article>
+        <article class="thesis narrow" data-reveal style="--d:.18s">
+          <span class="t-num">02 · время</span>
+          <h3>Сензитивные окна</h3>
+          <p>
+            У каждого навыка есть своё «окно» — период, когда он даётся легко и с восторгом:
+            у порядка — до 2,5 лет, у речи и мелкой моторики — пик как раз в 1–2 года.
+            Мы ловим эти окна, а не ждём «подрастёт».
+          </p>
+        </article>
+        <article class="thesis narrow terra" data-reveal style="--d:.1s">
+          <span class="t-num">03 · руки</span>
+          <h3>Рука — инструмент разума</h3>
+          <p>
+            Мария Монтессори называла руку «инструментом интеллекта».
+            Переливая, пересыпая, нанизывая, малыш буквально строит нейронные связи,
+            на которых позже вырастут речь и письмо.
+          </p>
+        </article>
+        <article class="thesis wide" data-reveal style="--d:.18s">
+          <span class="t-num">04 · среда</span>
+          <h3>Порядок снаружи — порядок внутри</h3>
+          <p>
+            В студии у каждого пособия своё место, и малыш быстро это понимает:
+            взял — поработал — вернул. Внешняя предсказуемость даёт чувство безопасности,
+            а с ним — смелость исследовать. Дома это превращается в ребёнка,
+            который сам убирает игрушки и знает, где что лежит.
+          </p>
+        </article>
+        <article class="thesis half" data-reveal style="--d:.1s">
+          <span class="t-num">05 · выбор</span>
+          <h3>Свобода выбора</h3>
+          <p>
+            На «свободном уроке» ребёнок сам выбирает материал, место и длительность работы.
+            Так рождается самая ценная вещь — внутренняя мотивация: «я сам хочу» вместо «меня заставили».
+          </p>
+        </article>
+        <article class="thesis half" data-reveal style="--d:.18s">
+          <span class="t-num">06 · ошибки</span>
+          <h3>Ошибка — друг, а не повод для оценки</h3>
+          <p>
+            Монтессори-пособия устроены так, что контроль ошибки встроен в материал:
+            цилиндр не встал в гнездо — видно сразу, без взрослого критика.
+            Ребёнок учится замечать и исправлять сам — и не боится пробовать.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ЗОНЫ СРЕДЫ ================= -->
+  <section class="zones on-dark">
+    <div class="wrap">
+      <span class="kicker" data-reveal>Как устроена студия</span>
+      <h2 class="split-h" data-reveal style="--d:.1s">
+        <span>Три зоны</span>
+        <span class="h-right">среды</span>
+      </h2>
+
+      <div class="zone-row" data-reveal style="--d:.1s">
+        <div class="z-fig">
+          <img src="assets/img/mont-practical.jpg" alt="Малыш переливает воду из кувшина в кувшин" loading="lazy">
+        </div>
+        <div class="z-body">
+          <span class="z-tag">зона 01</span>
+          <h3>Практическая жизнь</h3>
+          <p>
+            Переливание, пересыпание, застёжки, полив цветов, накрывание стола —
+            настоящие дела вместо «понарошку». Ребёнок чувствует себя нужным,
+            а руки и внимание становятся послушными.
+          </p>
+          <div class="z-items">
+            <span>переливание</span><span>пересыпание</span><span>застёжки</span>
+            <span>уход за растениями</span><span>порядок</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-row" data-reveal style="--d:.1s">
+        <div class="z-fig">
+          <img src="assets/img/mont-sensorial.jpg" alt="Малышка строит розовую башню из кубов" loading="lazy">
+        </div>
+        <div class="z-body">
+          <span class="z-tag">зона 02</span>
+          <h3>Сенсорное развитие</h3>
+          <p>
+            Розовая башня, коричневая лестница, цилиндры и шумовые коробочки
+            учат глаз и руку различать размер, вес, форму, звук и фактуру.
+            Это азбука восприятия, на которой держится вся будущая учёба.
+          </p>
+          <div class="z-items">
+            <span>размер</span><span>форма</span><span>цвет</span><span>вес</span><span>звук</span><span>фактура</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-row" data-reveal style="--d:.1s">
+        <div class="z-fig">
+          <img src="assets/img/mont-language.jpg" alt="Деревянный подвижной алфавит и шершавые буквы" loading="lazy">
+        </div>
+        <div class="z-body">
+          <span class="z-tag">зона 03</span>
+          <h3>Язык и математика</h3>
+          <p>
+            Шершавые буквы, которые читают пальцами, золотые бусины для счёта —
+            абстрактное становится осязаемым. Малыш «трогает» звуки и количества
+            задолго до того, как сядет за прописи.
+          </p>
+          <div class="z-items">
+            <span>шершавые буквы</span><span>звуки</span><span>бусины</span><span>счёт</span><span>количество</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= КАК ПРОХОДИТ ЗАНЯТИЕ ================= -->
+  <section class="lesson-flow">
+    <div class="wrap">
+      <span class="kicker" data-reveal>45 минут</span>
+      <h2 class="split-h" data-reveal style="--d:.1s">
+        <span>Как проходит</span>
+        <span class="h-right">занятие</span>
+      </h2>
+
+      <div class="flow-steps">
+        <div class="flow-step" data-reveal style="--d:.05s">
+          <span class="f-time">0–5 мин</span>
+          <h3>Встреча и настрой</h3>
+          <p>Малыш входит в спокойную, знакомую среду. Никакой спешки: адаптация — часть программы, а не помеха ей.</p>
+        </div>
+        <div class="flow-step" data-reveal style="--d:.1s">
+          <span class="f-time">5–30 мин</span>
+          <h3>Свободная работа</h3>
+          <p>Ребёнок сам выбирает пособие. Педагог наблюдает и в нужный момент показывает новый материал — коротко, медленно, руками. Мама рядом учится тем же приёмам.</p>
+        </div>
+        <div class="flow-step" data-reveal style="--d:.15s">
+          <span class="f-time">30–40 мин</span>
+          <h3>Порядок и быт</h3>
+          <p>Всё возвращаем на места вместе — это тоже урок: завершённость, ответственность, уважение к общему пространству.</p>
+        </div>
+        <div class="flow-step" data-reveal style="--d:.2s">
+          <span class="f-time">40–45 мин</span>
+          <h3>Музыкальный круг</h3>
+          <p>Финал, которого все ждут: песенки, пестушки, пальчиковые игры и движения в общем кругу. Дети уносят мелодии домой — и поют их всю неделю.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ЦИТАТА ================= -->
+  <section class="big-quote">
+    <div class="wrap">
+      <blockquote class="display" data-reveal>
+        «Детки бегут на занятия — они знают, что там их ждёт педагог, который не только научит, но и <em>выслушает, поможет, пожалеет</em>»
+      </blockquote>
+      <div class="bq-who" data-reveal style="--d:.15s">из отзыва мамы ученика · 2ГИС</div>
+    </div>
+  </section>
+
+  <!-- ================= ДИАГНОСТИКА ================= -->
+  <section class="diag" id="diagnostic-section">
+    <div class="wrap">
+      <span class="kicker" data-reveal>интерактивная карта</span>
+      <h2 class="split-h" data-reveal style="--d:.1s">
+        <span>Диагностика</span>
+        <span class="h-right">12–24 мес</span>
+      </h2>
+      <p class="lead" data-reveal style="--d:.2s; margin-top:24px">
+        Понаблюдайте за малышом несколько дней и отметьте то, что он уже умеет.
+        Карта покажет профиль развития по шести сферам, подскажет домашние игры —
+        и сохранится в PDF, чтобы взять её с собой на занятие.
+      </p>
+
+      <div class="diag-shell" id="diagnostic" data-reveal style="--d:.25s">
+        <div class="diag-bar">
+          <span class="d-title">Карта развития малыша</span>
+          <div class="diag-progress">
+            <span id="dpCount">отмечено 0 из 0</span>
+            <span class="dp-track"><span class="dp-fill" id="dpFill"></span></span>
+            <b id="dpPct">0%</b>
+          </div>
+        </div>
+
+        <div class="diag-body">
+          <!-- вступление -->
+          <div class="diag-intro" id="diagIntro">
+            <h3 class="display">Начнём знакомство</h3>
+            <p>Навыки подобраны по возрастным ориентирам от 12 до 24 месяцев.
+               Отвечайте честно: «ещё не умеет» — это не минус, а подсказка, куда играть дальше.</p>
+            <div class="diag-fields">
+              <div class="diag-field">
+                <label for="childName">Имя ребёнка</label>
+                <input type="text" id="childName" placeholder="Например, Алиса" maxlength="30" autocomplete="off">
+              </div>
+              <div class="diag-field">
+                <label for="childAge">Возраст, месяцев</label>
+                <select id="childAge">
+                  <option value="12">12 месяцев</option>
+                  <option value="13">13 месяцев</option>
+                  <option value="14">14 месяцев</option>
+                  <option value="15">15 месяцев</option>
+                  <option value="16">16 месяцев</option>
+                  <option value="17">17 месяцев</option>
+                  <option value="18" selected>18 месяцев</option>
+                  <option value="19">19 месяцев</option>
+                  <option value="20">20 месяцев</option>
+                  <option value="21">21 месяц</option>
+                  <option value="22">22 месяца</option>
+                  <option value="23">23 месяца</option>
+                  <option value="24">24 месяца</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-fill" id="startDiag" data-cursor="старт">
+              Начать диагностику
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+            </button>
+          </div>
+
+          <!-- опрос -->
+          <div id="diagQuiz">
+            <div class="diag-tabs" id="diagTabs" role="tablist"></div>
+            <div id="diagPanels"></div>
+          </div>
+
+          <!-- результаты -->
+          <div class="diag-results" id="diagResults">
+            <div class="results-grid">
+              <div class="radar-wrap">
+                <h4>Профиль развития</h4>
+                <div id="radarBox"></div>
+              </div>
+              <div class="verdict-list">
+                <h4>Итог по сферам</h4>
+                <div id="verdictList" style="display:contents"></div>
+              </div>
+            </div>
+            <div class="reco-block" id="recoBlock" style="display:none">
+              <h4>Домашние игры и рекомендации</h4>
+              <p class="r-sub">Сферы, которым стоит уделить внимание в ближайший месяц — простыми играми, без «уроков».</p>
+              <div class="reco-cols" id="recoCols"></div>
+            </div>
+            <div class="diag-actions" style="display:flex">
+              <button class="btn" id="backToQuiz">Вернуться к отметкам</button>
+              <button class="btn btn-fill" id="savePdf" data-cursor="PDF">
+                Сохранить в PDF
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v9M4 7l4 4 4-4M3 13h10"/></svg>
+              </button>
+              <button class="btn" id="printPdf">Распечатать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-actions" id="diagActions">
+        <button class="btn btn-fill" id="showResults" data-cursor="итог">
+          Показать результаты
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M9 3l5 5-5 5"/></svg>
+        </button>
+        <button class="btn" id="resetDiag">Сбросить отметки</button>
+      </div>
+
+      <p class="diag-note" data-reveal>
+        Карта составлена по возрастным ориентирам раннего развития и заменяет не врача,
+        а повод для наблюдения. Если что-то настораживает — приходите на занятие:
+        в игре педагог увидит больше любого теста.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= ЗАПИСЬ ================= -->
+  <section class="contact-band">
+    <div class="wrap">
+      <span class="kicker" data-reveal style="justify-content:center">Пробное занятие — 850 ₽</span>
+      <h2 class="display" data-reveal style="--d:.1s">Дайте малышу <em>среду</em></h2>
+      <p class="lead" data-reveal style="--d:.2s">
+        Занятия проходят по вторникам и пятницам в утреннее время.
+        Мест в группе до девяти детей — запишитесь заранее.
+      </p>
+      <div class="contact-actions" data-reveal style="--d:.3s">
+        <a class="btn btn-fill" href="https://vk.ru/id27806549" target="_blank" rel="noopener" data-cursor="ВК">Записаться в ВКонтакте</a>
+        <a class="btn" href="tel:+73452531220" data-cursor="звонок">Тел. 53-12-20 · доб. 3</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-title">Студия <em>Монтессори</em></div>
+        <p style="margin-top:18px;color:rgba(244,237,225,.6);max-width:42ch;font-size:15px">
+          Для малышей от 1 года вместе с мамой · детский центр «Лукошко»
+        </p>
+      </div>
+      <div class="footer-contacts">
+        <span>Педагог — Ирина Кичигина</span>
+        <a href="https://2gis.ru/tyumen/firm/1830115630187953" target="_blank" rel="noopener">Тюмень, ул. Газовиков, 41к1</a>
+        <a href="tel:+73452531220">тел. 53-12-20, доб. 3</a>
+        <a href="https://vk.ru/id27806549" target="_blank" rel="noopener">vk.ru/id27806549</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span data-year></span> Ирина Кичигина · студия Монтессори</span>
+      <span><a href="index.html">Визитка</a> · <a href="logoritmika.html">Логоритмика</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagnostic.js"></script>
+</body>
+</html>
