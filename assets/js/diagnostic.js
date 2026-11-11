@@ -340,7 +340,7 @@
     root.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  /* ---------- отчёт для PDF / печати ---------- */
+  /* ---------- отчёт для печати ---------- */
   function reportHTML() {
     const name = state.name || 'Малыш';
     const ageTxt = state.age + ' ' + (state.age === 12 ? 'месяцев' : state.age >= 21 && state.age <= 24 ? 'месяца' : 'месяцев');
@@ -380,44 +380,6 @@
       'Если что-то настораживает, приходите на занятие — педагог посмотрит малыша в игре и подскажет следующие шаги. ' +
       'Ирина Кичигина, Монтессори-педагог, учитель-дефектолог. «Лукошко», ул. Газовиков, 41к1 · тел. 53-12-20 (доб. 3)</p></div>';
   }
-
-  function loadScript(src) {
-    return new Promise((res, rej) => {
-      const s = document.createElement('script');
-      s.src = src; s.onload = res; s.onerror = rej;
-      document.head.appendChild(s);
-    });
-  }
-
-  $('#savePdf').addEventListener('click', async () => {
-    const btn = $('#savePdf');
-    const original = btn.textContent;
-    btn.textContent = 'Готовим PDF…';
-    btn.disabled = true;
-    try {
-      if (!window.html2pdf) {
-        await loadScript('https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js');
-      }
-      const holder = document.createElement('div');
-      holder.style.cssText = 'position:fixed;left:-12000px;top:0;width:820px;background:#fff;';
-      holder.innerHTML = reportHTML();
-      document.body.appendChild(holder);
-      const fname = 'razvitie-' + (state.name || 'malysh').toLowerCase().replace(/[^a-zа-яё0-9]+/gi, '-') + '.pdf';
-      await window.html2pdf().set({
-        margin: 8,
-        filename: fname,
-        image: { type: 'jpeg', quality: 0.96 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#fcfcf8' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).from(holder.firstChild).save();
-      holder.remove();
-    } catch (err) {
-      printReport();
-    } finally {
-      btn.textContent = original;
-      btn.disabled = false;
-    }
-  });
 
   function printReport() {
     let pr = document.getElementById('print-report');
